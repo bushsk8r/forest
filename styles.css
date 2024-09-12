@@ -1,0 +1,112 @@
+@layer base {
+    :root {
+        --love: hsla(58, 100%, 60%, 1);
+        --inspo: orange;
+        --self: skyblue;
+        --ego: hsla(0, 100%, 40%, 1);
+        --home: hsla(142, 100%, 37%, 1);
+        --earth: hsla(37, 100%, 32%, 1);
+        --base: slategrey;
+        --bottom: 1px solid black;
+        --dark: black;
+
+        --underline: underline wavy var(--ego) 2px;
+
+        --boundaryBox: solid black 2px;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Helvetica, sans-serif;
+        background-color: var(--base);
+        color: var(--self);
+        font-size: 2rem;
+    }
+
+    h1,
+    h2 {
+        background: var(--home);
+        margin: 0;
+        padding: 0.5rem;
+        color: var(--earth);
+    }
+
+    button {
+        border: var(--boundaryBox);
+        border-radius: 10px;
+        color: inherit;
+        font-size: inherit;
+    }
+
+    nav {
+        background: var(--self);
+        color: var(--base);
+    }
+
+    ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr 3fr 5fr;
+        list-style: none;
+        gap: 2rem;
+        padding: 0.5rem;
+    }
+
+    li {
+        padding: 1rem;
+    }
+
+    a,
+    a:any-link {
+        background: var(--love);
+        padding: 0.5rem;
+        text-decoration: var(--underline);
+        color: inherit;
+        font-size: inherit;
+    }
+}
+
+@layer index {
+    nav > ul > button:first-child {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+}
+
+@layer footer {
+    footer {
+        display: flex;
+        justify-content: center;
+        padding: 1rem;
+    }
+
+    footer div {
+        height: 3rem;
+        width: 3rem;
+    }
+
+    .love {
+        background-color: var(--love);
+    }
+    .inspo {
+        background-color: var(--inspo);
+    }
+    .self {
+        background-color: var(--self);
+    }
+    .ego {
+        background-color: var(--ego);
+    }
+    .home {
+        background-color: var(--home);
+    }
+    .earth {
+        background-color: var(--earth);
+        color: var(--base);
+    }
+}
