@@ -61,6 +61,11 @@
         padding: 1rem;
     }
 
+    nav > ul > button:first-child {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
     a,
     a:any-link {
         background: var(--love);
@@ -68,13 +73,18 @@
         text-decoration: var(--underline);
         color: inherit;
         font-size: inherit;
+        place-self: center;
     }
 }
 
-@layer index {
-    nav > ul > button:first-child {
-        grid-column-start: 1;
-        grid-column-end: 3;
+@layer nav {
+    p {
+        text-align: left;
+        background: var(--love);
+    }
+    .selected {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
     }
 }
 
