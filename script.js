@@ -3,7 +3,7 @@ const descriptions = {
   msaga: "the human",
   msga: "a digital graffiti wall",
   sk8: " an open studio",
-  baked: "a bakery in the cloud",
+  baked: "a cloud bakery",
 };
 const btns = document.getElementsByClassName("section");
 

@@ -43,6 +43,11 @@
         border-radius: 10px;
         color: inherit;
         font-size: inherit;
+        transition: transform 0.2s;
+    }
+
+    button:active {
+        transform: translateY(5%);
     }
 
     nav {
@@ -53,7 +58,7 @@
     ul {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 1fr 3fr 4fr;
+        grid-template-rows: 1fr 2fr 2fr;
         list-style: none;
         gap: 2rem;
         padding: 0.5rem;
