@@ -27,10 +27,12 @@
         color: var(--self);
         font-size: 2rem;
     }
+    marquee {
+        background: var(--home);
+    }
 
     h1,
     h2 {
-        background: var(--home);
         margin: 0;
         padding: 0.5rem;
         color: var(--earth);
@@ -51,7 +53,7 @@
     ul {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 1fr 3fr 5fr;
+        grid-template-rows: 1fr 3fr 4fr;
         list-style: none;
         gap: 2rem;
         padding: 0.5rem;
@@ -79,9 +81,10 @@
 
 @layer nav {
     p {
-        text-align: left;
-        background: var(--love);
+        color: var(--love);
+        font-size: 2.5rem;
     }
+
     .selected {
         display: grid;
         grid-template-columns: 1fr 1fr;
